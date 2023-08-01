@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Assignment1{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-5 mb-5">Welcome to MealDB</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for meal in meals %}
+
+    <div class="col">
+        <div class="">
+
+            <img src="{{ meal.strMealThumb }}" alt="{{ meal.strMeal }}" style="width: 200px;">
+            <div class="card-body">
+                <h5 class="card-title">{{ meal.strMeal }}</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+{% endblock %}
